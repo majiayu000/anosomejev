@@ -3,7 +3,7 @@
 > TypeSafe **System One / Jev** 高信号精选地图：Must-30、信任标签、批判与校准、**中文一等公民**。  
 > **与 TypeSafe 无关联。** 数量百科请看 [awesomejev.com](https://awesomejev.com/)；本仓库**不以条目数量竞争**，专注「什么重要、什么被证明、什么被夸大」。
 
-[English](README.md) · [信任标签](TRUST_LABELS.md) · [贡献指南](CONTRIBUTING.md) · [目录摘要](SUMMARY.md) · 协议：[CC0-1.0](LICENSE)
+[English](README.md) · [**中文雷达**](radar/README.md) · [信任标签](TRUST_LABELS.md) · [贡献指南](CONTRIBUTING.md) · [目录摘要](SUMMARY.md) · 协议：[CC0-1.0](LICENSE)
 
 **星标**：标注 `awesomejev 2026-09-17` 的来自当日 [awesomejev.com](https://awesomejev.com/) 快照；实时 GitHub 可能不同。不编造指标。
 
@@ -34,6 +34,18 @@
 
 > **类型安全 ≠ 事实正确。**  
 > 符合 schema 的 Choice / Score / Noul 答案仍可能**自信地错**。厂商所谓「零幻觉 / 零类型错误」指的是**不会发明 schema 之外的文本**，不是语义真理。HN、中文报道与官方 jaggedness 均强调这一点。
+
+
+---
+
+## 中文 Jev 雷达（主产品）
+
+每周精选，不拼百科条目数：
+
+- 索引：[radar/](radar/README.md)
+- 最新一期：[2026-W38 · 发车周](radar/2026-W38.md)
+
+清单（Must-30）是底座；**雷达才是持续更新的前台。**
 
 ---
 

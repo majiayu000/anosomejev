@@ -1,3 +1,5 @@
+**Chinese weekly radar:** [radar/](radar/README.md) (latest: [2026-W38](radar/2026-W38.md))
+
 # anosomejev — Awesome Jev
 
 > Curated **high-signal** map of TypeSafe **System One / Jev** — Must-30, trust labels, critique, and 中文 first-class.  
