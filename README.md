@@ -3,11 +3,21 @@
 # anosomejev — Awesome Jev
 
 > Curated **high-signal** map of TypeSafe **System One / Jev** — Must-30, trust labels, critique, and 中文 first-class.  
-> **Not affiliated with TypeSafe.** Complementary to [awesomejev.com](https://awesomejev.com/) (encyclopedia / firehose); we do **not** compete on quantity.
+> **Not affiliated with TypeSafe.** Full encyclopedia mirror lives in [`catalog/`](catalog/README.md) (sourced from [awesomejev.com](https://awesomejev.com/)); Must-30 + radar stay curated — we do **not** compete on quantity.
 
 [简体中文](README_zh.md) · [Trust labels](TRUST_LABELS.md) · [Contributing](CONTRIBUTING.md) · [Summary](SUMMARY.md) · License: [CC0-1.0](LICENSE)
 
 **Star counts** marked `awesomejev 2026-09-17` come from the [awesomejev.com](https://awesomejev.com/) snapshot refreshed that day. Live GitHub may differ. No invented metrics.
+
+### 三层结构 / Three layers
+
+| Layer | Path | Role |
+| --- | --- | --- |
+| **全量百科** Full encyclopedia | [`catalog/`](catalog/README.md) | Mirror of [awesomejev.com](https://awesomejev.com/) (~410 entries). Firehose. |
+| **精选 Must-30** | § [Must-include 30](#2-must-include-30) below | Curated high-signal picks (unchanged). |
+| **中文雷达** Chinese weekly radar | [`radar/`](radar/README.md) | Weekly Chinese briefing (unchanged). |
+
+`catalog/` is the quantity layer; Must-30 and `radar/` stay curated. Snapshot notes: [`catalog/SOURCE.md`](catalog/SOURCE.md).
 
 ---
 
