@@ -1,23 +1,22 @@
-**Chinese weekly radar:** [radar/](radar/README.md) (latest: [2026-W38](radar/2026-W38.md))
+# anosomejev — Trust Map for Jev
 
-# anosomejev — Awesome Jev
+> Searchable **Trust Map** for TypeSafe System One / Jev: directory + trust labels + Must-30 + weekly Chinese radar.  
+> **Not affiliated with TypeSafe.** Primary data from our GitHub crawl ([SOURCE.md](SOURCE.md)) — not an uncredited awesomejev.com mirror.
 
-> Curated **high-signal** map of TypeSafe **System One / Jev** — Must-30, trust labels, critique, and 中文 first-class.  
-> **Not affiliated with TypeSafe.** Full encyclopedia mirror lives in [`catalog/`](catalog/README.md) (sourced from [awesomejev.com](https://awesomejev.com/)); Must-30 + radar stay curated — we do **not** compete on quantity.
+[中文](README_zh.md) · **[Open Trust Map](docs/index.html)** · [This week radar](docs/radar.html) · [radar/](radar/README.md) · [Trust labels](TRUST_LABELS.md) · [SOURCE](SOURCE.md) · [CC0-1.0](LICENSE)
 
-[简体中文](README_zh.md) · [Trust labels](TRUST_LABELS.md) · [Contributing](CONTRIBUTING.md) · [Summary](SUMMARY.md) · License: [CC0-1.0](LICENSE)
+**GitHub Pages (after enable):** https://majiayu000.github.io/anosomejev/  
+Enable: Settings → Pages → Deploy from branch → `main` → `/docs` (see [.github/PAGES.md](.github/PAGES.md))
 
-**Star counts** marked `awesomejev 2026-09-17` come from the [awesomejev.com](https://awesomejev.com/) snapshot refreshed that day. Live GitHub may differ. No invented metrics.
-
-### 三层结构 / Three layers
+### Three layers
 
 | Layer | Path | Role |
 | --- | --- | --- |
-| **全量百科** Full encyclopedia | [`catalog/`](catalog/README.md) | Mirror of [awesomejev.com](https://awesomejev.com/) (~410 entries). Firehose. |
-| **精选 Must-30** | § [Must-include 30](#2-must-include-30) below | Curated high-signal picks (unchanged). |
-| **中文雷达** Chinese weekly radar | [`radar/`](radar/README.md) | Weekly Chinese briefing (unchanged). |
+| **Trust directory (front)** | [`docs/`](docs/index.html) | Self-crawled GitHub index + search/filter/tags (~584 entries) |
+| **Must-30** | below | Editorial high-signal picks |
+| **Chinese radar** | [`radar/`](radar/README.md) | Weekly narrative |
 
-`catalog/` is the quantity layer; Must-30 and `radar/` stay curated. Snapshot notes: [`catalog/SOURCE.md`](catalog/SOURCE.md).
+Preview locally: `cd docs && python3 -m http.server 8080`
 
 ---
 

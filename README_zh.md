@@ -1,21 +1,22 @@
-# anosomejev — Awesome Jev（精选）
+# anosomejev — Jev 可信地图
 
-> TypeSafe **System One / Jev** 高信号精选地图：Must-30、信任标签、批判与校准、**中文一等公民**。  
-> **与 TypeSafe 无关联。** 全量百科见本仓 [`catalog/`](catalog/README.md)（镜像自 [awesomejev.com](https://awesomejev.com/)）；Must-30 与雷达保持精选——本仓库**不以条目数量竞争**，专注「什么重要、什么被证明、什么被夸大」。
+> **Trust Map for Jev / System One**：可搜索目录 + 信任标签 + Must-30 + 每周中文雷达。  
+> **与 TypeSafe 无关联。** 主数据来自 GitHub 自采（见 [SOURCE.md](SOURCE.md)），不是 awesomejev.com 的无署名镜像。
 
-[English](README.md) · [**中文雷达**](radar/README.md) · [信任标签](TRUST_LABELS.md) · [贡献指南](CONTRIBUTING.md) · [目录摘要](SUMMARY.md) · 协议：[CC0-1.0](LICENSE)
+[English](README.md) · **[打开可信地图](docs/index.html)** · [本周雷达](docs/radar.html) · [雷达 md](radar/README.md) · [信任标签](TRUST_LABELS.md) · [SOURCE](SOURCE.md) · 协议：[CC0-1.0](LICENSE)
 
-**星标**：标注 `awesomejev 2026-09-17` 的来自当日 [awesomejev.com](https://awesomejev.com/) 快照；实时 GitHub 可能不同。不编造指标。
+**GitHub Pages（启用后）：** https://majiayu000.github.io/anosomejev/  
+启用：Settings → Pages → Deploy from branch → `main` → `/docs`（详见 [.github/PAGES.md](.github/PAGES.md)）
 
 ### 三层结构
 
 | 层级 | 路径 | 作用 |
 | --- | --- | --- |
-| **全量百科** | [`catalog/`](catalog/README.md) | [awesomejev.com](https://awesomejev.com/) 全量镜像（约 410 条）。水管式索引。 |
-| **精选 Must-30** | 下文 Must-30 / 清单章节 | 人工高信号精选（内容不删改）。 |
-| **中文雷达** | [`radar/`](radar/README.md) | 中文周报（内容不删改）。 |
+| **可信目录（前台）** | [`docs/`](docs/index.html) | 自采 GitHub 索引 + 搜索/筛选/信任标签（当前约 584 条） |
+| **精选 Must-30** | 下文 | 人工高信号 |
+| **中文雷达** | [`radar/`](radar/README.md) | 每周高信号叙事 |
 
-数量看 `catalog/`；判断与叙事看 Must-30 与 `radar/`。镜像说明见 [`catalog/SOURCE.md`](catalog/SOURCE.md)。
+本地预览：`cd docs && python3 -m http.server 8080`
 
 ---
 

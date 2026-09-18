@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jev 可信地图 · anosomejev</title>
+  <meta name="description" content="Trust Map for Jev / System One — 可搜索目录 + 信任标签 + 周雷达。与 TypeSafe 无关联。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="topnav">
+      <a class="brand" href="index.html">ano<span>somejev</span> · 可信地图</a>
+      <div class="navlinks">
+        <a href="radar.html">本周雷达</a>
+        <a href="#legend">信任图例</a>
+        <a href="https://github.com/majiayu000/anosomejev" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <h1><em>Jev 可信地图</em><br />Trust Map for System One</h1>
+      <p class="lede">
+        不是沉默的全量镜像。三层结构：<strong>Must-30</strong> 精选底座、
+        <strong>信任标签</strong> 目录、每周 <strong>中文雷达</strong>。
+        帮你分清厂商主张、独立评测、复刻与星标膨胀。与 TypeSafe <strong>无关联</strong>。
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="radar.html">查看最新雷达 · 2026-W38</a>
+        <button class="btn" type="button" id="btn-must" onclick="document.getElementById('must30').checked=true;document.getElementById('must30').dispatchEvent(new Event('change'))">只看 Must-30</button>
+        <a class="btn" href="SOURCE.md">数据来源 SOURCE</a>
+      </div>
+      <div class="pill-row">
+        <span class="pill">中文 UI · EN 内容 OK</span>
+        <span class="pill">红线：类型安全 ≠ 事实正确</span>
+        <span class="pill">Pages: https://majiayu000.github.io/anosomejev/</span>
+      </div>
+    </header>
+
+    <div class="redline">
+      <strong>红线：</strong>符合 schema 的 Choice / Score / Noul 仍可能<strong>自信地错</strong>。
+      厂商「零幻觉」指的是不会发明 schema 之外的文本，不是语义真理。
+    </div>
+
+    <section class="controls" aria-label="筛选">
+      <div class="row">
+        <input type="search" id="q" placeholder="搜索名称、描述、标签、仓库…" autocomplete="off" />
+        <select id="category" aria-label="分类">
+          <option value="">全部分类</option>
+        </select>
+        <select id="trust" aria-label="信任标签">
+          <option value="">全部信任标签</option>
+        </select>
+        <select id="sort" aria-label="排序">
+          <option value="stars">按星标</option>
+          <option value="updated">按更新时间</option>
+          <option value="must30">按 Must-30</option>
+        </select>
+      </div>
+      <div class="row">
+        <label><input type="checkbox" id="must30" /> 仅 Must-30</label>
+        <span class="meta-line" id="status">加载中…</span>
+        <span class="meta-line" id="count"></span>
+      </div>
+    </section>
+
+    <section class="legend" id="legend"></section>
+    <section class="grid" id="grid" aria-live="polite"></section>
+
+    <footer>
+      <p>anosomejev v2 · Trust Map · 静态站点（纯 HTML/CSS/JS，无构建步骤）。</p>
+      <p>离线打开：用本地静态服务器（如 <code>python3 -m http.server</code> 在 <code>docs/</code>）以避免 <code>file://</code> 的 fetch 限制；或在 GitHub Pages 上浏览。</p>
+      <p>启用 Pages：仓库 Settings → Pages → Source = Deploy from a branch → Branch <code>main</code> / folder <code>/docs</code>。</p>
+    </footer>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
