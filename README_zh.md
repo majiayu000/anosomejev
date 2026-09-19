@@ -6,6 +6,8 @@ Jev（TypeSafe System One）的开源项目、SDK、教程和评测精选，帮�
 
 本清单由社区维护，与 TypeSafe 无隶属关系。收录表示值得参考，不代表已通过安全、准确率或生产可用性验证。
 
+**完整收集内容：[410 条目录资源](catalog/FULL.md) · [584 条 GitHub 与补充资源](catalog/GITHUB.md)。** 两批有重叠，下面的入门精选只是其中一部分。[来源与数量说明](catalog/README.md)。
+
 ## 目录
 
 - [入门](#入门)
