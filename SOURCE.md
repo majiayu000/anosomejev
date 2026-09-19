@@ -1,29 +1,31 @@
 # 资料来源
 
-Awesome Jev 是人工整理的资源清单。README 提供入门与精选项目，分类文档补充相关资料。这里的推荐不代表项目已经通过测试。
+Awesome Jev 是社区维护的资源清单。README 提供入门与精选项目，分类文档补充资料；推荐不代表项目已经通过测试。本次入门、示例和网站修改由 AI 辅助完成，仍需维护者审阅，不宣称已满足其他 Awesome 目录的收录政策。
 
-## 来源与维护
+## 当前精选与网站
 
-优先引用官方文档、GitHub 仓库、作者文章和原始评测。其他目录可用于发现资料，具体介绍应指向原项目。新增或更正条目直接修改相应 Markdown，流程见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+`README.md` 与 `README_zh.md` 是中英文精选的编辑来源。`scripts/sync_catalog.py` 从明确标记的区段提取条目，生成 `docs/data/curated.json`；`--check` 检查生成内容是否过期。网站只读取这个生成文件，按 README 阅读顺序显示，不按星数排名。
 
-现有分类与研究材料主要整理于 2026-09-17 至 2026-09-19。整理日期不等于逐项测试日期。API、价格、开放范围与项目维护状态可能变化，使用时应查看原始来源。
+这个同步范围仅限**首页精选**，不意味着 `catalog/`、历史研究或旧网页快照都已逐条重新核实。API 说明于 2026-09-19 对照官方文档；示例只进行了离线测试，没有进行真实 API 调用或逐项项目评测。
 
-- [TypeSafe 文档](https://docs.typesafe.ai/)与[发布文章](https://typesafe.ai/blog/introducing-system-one-models-and-jev)提供官方说明。
+## 主要来源与归因
+
+优先引用官方文档、GitHub 仓库、作者文章和原始评测。其他目录用于发现资料，条目说明应指向原项目。
+
+- [TypeSafe 文档](https://docs.typesafe.ai/)与[发布文章](https://typesafe.ai/blog/introducing-system-one-models-and-jev)提供产品说明。
 - [awesomejev.com](https://awesomejev.com/)、[hellogumbo/awesome-jev](https://github.com/hellogumbo/awesome-jev)、[AbdelStark/awesome-typesafe](https://github.com/AbdelStark/awesome-typesafe)、[yibie/awesome-jev](https://github.com/yibie/awesome-jev)和[AnotiaWang/awesome-jev](https://github.com/AnotiaWang/awesome-jev)曾用于发现项目。
-- [research/](research/00-overview.md)保留早期调研来源和当时的记录，不是当前 API 文档，也不表示本仓库独立复现了其中结果。
+- [research/](research/00-overview.md)保留 2026-09-17 至 2026-09-19 的早期调研记录，不是当前 API 文档，也不表示本仓库独立复现了其中结果。
 
-首页和分类页不再维护重复的星数排名。研究笔记中的历史星数保留原日期与来源，不作为当前排名。
+整理日期不等于逐项测试日期。API、价格、开放范围和项目维护状态可能变化，使用时检查原始来源。历史星数保留原日期与来源，不作为当前排名。
 
-## 网页数据的历史来源
+## 历史资料没有删除
 
-`docs/` 保留原网页。其 `data/entries.json` 是一份独立快照，未与当前 Markdown 同步。
+[完整收集记录](catalog/FULL.md)以及 `catalog/entries.json` 保留，来源见[目录说明](catalog/SOURCE.md)。旧版 `docs/data/entries.json`、旧雷达页面和报告也保留，但不再作为当前首页精选的数据源。
 
-旧版来源说明称，该数据由 GitHub API 采集结果与当时的 README 精选表合并。它引用的 `/workspace/uploads/discovered_repos.json` 原始文件没有随仓库提交，采集和生成脚本也未提交。因此，目前不能仅凭仓库重做该数据集，也不能据此宣称每条数据已经得到独立核实。
+旧网页来源说明声称数据来自 GitHub 采集和当时的 Must-30 表，但引用的 `/workspace/uploads/discovered_repos.json`、采集和生成脚本没有随仓库提交。不能仅凭这份历史快照重做原始采集，也不能宣称每条已独立核实。原始来源说明完整保存在 [docs/archive/SOURCE-v2.md](docs/archive/SOURCE-v2.md)，其中的旧名称、路径和主张是历史记录，不是当前事实保证。
 
-网页快照中仍有旧版标签与推荐字段，它们不作为当前资源清单的收录标准。本次文档整理未修改这些网页文件。
+新增候选的检索与 Agent 复核流程见 [research/DISCOVERY.md](research/DISCOVERY.md)。它不会把元数据发现自动升级为已验证项目。
 
-[完整资源目录](catalog/FULL.md) 汇总收集的项目、文档与文章。原始数据保留以便追溯，来源和维护方式见[目录说明](catalog/SOURCE.md)。
+## 名称与上线状态
 
-## 名称
-
-仓库使用 `awesome-jev`，标题使用 **Awesome Jev**，遵循常见的 `awesome-主题` 命名方式。命名参考 [Awesome 清单规范](https://github.com/sindresorhus/awesome/blob/main/pull_request_template.md)，不表示已被该目录收录。
+仓库名为 `awesome-jev`，标题为 **Awesome Jev**，与 TypeSafe 无隶属关系。名字不表示已被 [sindresorhus/awesome](https://github.com/sindresorhus/awesome) 收录。网站源码存在不表示 GitHub Pages 已启用；预览与发布说明见 [.github/PAGES.md](.github/PAGES.md)。

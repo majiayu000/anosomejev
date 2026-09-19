@@ -1,27 +1,59 @@
 # Awesome Jev
 
-Jev（TypeSafe System One）的开源项目、SDK、教程和评测精选，帮助你寻找接入方式与参考实现。
+认识 Jev、跑通第一个示例，再查找适合自己的 SDK、项目和评测。
 
-[English](README.md) · [收录与贡献说明](CONTRIBUTING.md) · [资料来源](SOURCE.md)
+[English](README.md) · [从这里开始](guides/start.md#中文) · [可运行示例](examples/README.md#中文) · [参与贡献](CONTRIBUTING.md)
 
 本清单由社区维护，与 TypeSafe 无隶属关系。收录表示值得参考，不代表已通过安全、准确率或生产可用性验证。
 
-**[完整资源目录](catalog/FULL.md)** · 按类别浏览项目、工具、教程和文章。
+## Jev 是什么？
 
-## 目录
+Jev 是 TypeSafe 的结构化决策模型。你提供**状态**（消息、文档或应用上下文）和**预先定义的问题**，它返回可以交给代码处理的值。例如：为工单选择队列、给用户情绪打分、判断消息是否紧急。产品定义见[官方介绍](https://docs.typesafe.ai/introduction)。
 
-- [入门](#入门)
-- [SDK 与接入](#sdk-与接入)
-- [智能体工具](#智能体工具)
-- [浏览器自动化](#浏览器自动化)
-- [应用与游戏](#应用与游戏)
-- [评测与开源实现](#评测与开源实现)
-- [文章与中文资源](#文章与中文资源)
-- [更多资料](#更多资料)
+| 问题类型 | 适合做什么 | 怎样理解结果 |
+| --- | --- | --- |
+| **Choice** | 从预先定义的选项中选择工单队列 | 选中的选项，以及各选项的概率分布 |
+| **Score** | 按明确的有序等级评价内容 | 评分标准上的位置，可以是小数 |
+| **Noul** | 判断一个定义清楚的是非条件 | 0 到 1 的概率，没有单独的 confidence 字段 |
+
+```mermaid
+flowchart LR
+    S["业务状态 + 预定义问题"] --> J["Jev"]
+    J --> A["Choice / Score / Noul"]
+    A --> C["代码校验与业务规则"]
+    C --> R["路由建议或人工复核"]
+```
+
+模型负责判断，代码控制执行。**格式正确不代表判断正确。** Choice/Score 的 `confidence` 概括概率分布的形状，不是通用的正确率保证。详见[三种基础问题](https://docs.typesafe.ai/primitives)与[置信度说明](https://docs.typesafe.ai/confidence)。
+
+## 你想先做什么？
+
+| 目标 | 入口 |
+| --- | --- |
+| 理解概念与能力边界 | [新手指南](guides/start.md#中文) |
+| 不配置密钥，先跑通流程 | [离线工单路由示例](examples/README.md#中文) |
+| 调用真实模型 | [显式启用 live 模式](examples/README.md#live-mode) |
+| 找 SDK 或集成方案 | 下方 [SDK 与接入](#sdk-与接入) |
+| 用并行任务发现更多资源 | [候选检索与 Agent 分工](research/DISCOVERY.md) |
+| 查看精选之外的资料 | [完整收集记录](catalog/FULL.md)，含历史及待核实条目 |
+
+示例只需要 Python 3.10+ 标准库，不需要安装依赖或填写密钥：
+
+```bash
+git clone https://github.com/majiayu000/awesome-jev.git
+cd awesome-jev
+python3 examples/ticket_routing.py
+```
+
+默认输出来自**人工编写的演示数据**，不代表模型判断。使用 `--live` 前，请阅读示例里的密钥、费用与隐私说明。
+
+## 精选资源
+
+下面的列表直接在 Markdown 中维护。网站精选数据从这两份 README 提取，不再单独维护另一份精选清单。[来源与历史快照说明](SOURCE.md)。
+
+<!-- curated:start -->
 
 ## 入门
-
-Jev 用于选择选项、打分和判断条件，结果可供程序继续处理。输出符合规定格式，并不意味着判断一定正确。
 
 - [官方文档](https://docs.typesafe.ai/) - API 说明、快速入门与使用示例。
 - [模型能力局限](https://docs.typesafe.ai/model-jaggedness/jev-1.13.md) - Jev 1.13 的已知限制与使用注意事项。
@@ -75,14 +107,12 @@ Jev 用于选择选项、打分和判断条件，结果可供程序继续处理�
 - [宝玉的中文解读](https://x.com/dotey/status/2100109937237987823) - 解释 Jev 的用途，属于第三方解读，不是独立评测。
 - [jev-report](https://github.com/HackSing/jev-report) - 中文报告与复现材料；2026-09-19 已确认仓库存在，本清单未复现其中结果。
 
+<!-- curated:end -->
+
 ## 更多资料
 
-- [按资源类别查找](SUMMARY.md)。
-- [使用方法](SUMMARY.md#使用方法)。
-- [能力局限与评测注意事项](taxonomy/critique-limits.md)。
-- [社区动态](updates/README.md)。
-- [历史研究笔记](research/00-overview.md)。
+[按资源类别查找](SUMMARY.md) · [使用方法](SUMMARY.md#使用方法) · [能力局限](taxonomy/critique-limits.md) · [社区动态](updates/README.md) · [历史研究笔记](research/00-overview.md)。
 
 ## 参与贡献
 
-欢迎补充项目、更正描述和提交失败案例，请先阅读[贡献说明](CONTRIBUTING.md)。
+欢迎补充项目、更正描述和提交失败案例，请先阅读[贡献说明](CONTRIBUTING.md)。自动检索的结果只进入候选池，不会自动获得推荐。[CC0 许可](LICENSE)。

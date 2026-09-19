@@ -1,81 +1,75 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jev 可信地图 · anosomejev</title>
-  <meta name="description" content="Trust Map for Jev / System One — 可搜索目录 + 信任标签 + 周雷达。与 TypeSafe 无关联。" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awesome Jev · 从理解到第一次调用</title>
+  <meta name="description" content="Jev 双语入门与精选实践：认识 Choice、Score、Noul，运行工单示例，查找 SDK、应用和评测。社区维护，与 TypeSafe 无隶属关系。">
+  <link rel="stylesheet" href="css/learn.css">
+  <script src="js/app.js" defer></script>
 </head>
 <body>
+  <a class="skip" href="#main">跳到正文</a>
   <div class="wrap">
-    <nav class="topnav">
-      <a class="brand" href="index.html">ano<span>somejev</span> · 可信地图</a>
-      <div class="navlinks">
-        <a href="radar.html">本周雷达</a>
-        <a href="#legend">信任图例</a>
-        <a href="https://github.com/majiayu000/anosomejev" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </nav>
-
-    <header class="hero">
-      <h1><em>Jev 可信地图</em><br />Trust Map for System One</h1>
-      <p class="lede">
-        不是沉默的全量镜像。三层结构：<strong>Must-30</strong> 精选底座、
-        <strong>信任标签</strong> 目录、每周 <strong>中文雷达</strong>。
-        帮你分清厂商主张、独立评测、复刻与星标膨胀。与 TypeSafe <strong>无关联</strong>。
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="radar.html">查看最新雷达 · 2026-W38</a>
-        <button class="btn" type="button" id="btn-must" onclick="document.getElementById('must30').checked=true;document.getElementById('must30').dispatchEvent(new Event('change'))">只看 Must-30</button>
-        <a class="btn" href="SOURCE.md">数据来源 SOURCE</a>
-      </div>
-      <div class="pill-row">
-        <span class="pill">中文 UI · EN 内容 OK</span>
-        <span class="pill">红线：类型安全 ≠ 事实正确</span>
-        <span class="pill">Pages: https://majiayu000.github.io/anosomejev/</span>
-      </div>
+    <header class="topbar">
+      <a class="brand" href="index.html">Awesome <span>Jev</span></a>
+      <nav aria-label="主导航">
+        <a href="#learn">认识 Jev</a><a href="#resources">精选资源</a>
+        <a href="https://github.com/majiayu000/awesome-jev">GitHub ↗</a>
+      </nav>
     </header>
-
-    <div class="redline">
-      <strong>红线：</strong>符合 schema 的 Choice / Score / Noul 仍可能<strong>自信地错</strong>。
-      厂商「零幻觉」指的是不会发明 schema 之外的文本，不是语义真理。
-    </div>
-
-    <section class="controls" aria-label="筛选">
-      <div class="row">
-        <input type="search" id="q" placeholder="搜索名称、描述、标签、仓库…" autocomplete="off" />
-        <select id="category" aria-label="分类">
-          <option value="">全部分类</option>
-        </select>
-        <select id="trust" aria-label="信任标签">
-          <option value="">全部信任标签</option>
-        </select>
-        <select id="sort" aria-label="排序">
-          <option value="stars">按星标</option>
-          <option value="updated">按更新时间</option>
-          <option value="must30">按 Must-30</option>
-        </select>
-      </div>
-      <div class="row">
-        <label><input type="checkbox" id="must30" /> 仅 Must-30</label>
-        <span class="meta-line" id="status">加载中…</span>
-        <span class="meta-line" id="count"></span>
-      </div>
-    </section>
-
-    <section class="legend" id="legend"></section>
-    <section class="grid" id="grid" aria-live="polite"></section>
-
-    <footer>
-      <p>anosomejev v2 · Trust Map · 静态站点（纯 HTML/CSS/JS，无构建步骤）。</p>
-      <p>离线打开：用本地静态服务器（如 <code>python3 -m http.server</code> 在 <code>docs/</code>）以避免 <code>file://</code> 的 fetch 限制；或在 GitHub Pages 上浏览。</p>
-      <p>启用 Pages：仓库 Settings → Pages → Source = Deploy from a branch → Branch <code>main</code> / folder <code>/docs</code>。</p>
-    </footer>
+    <main id="main">
+      <section class="hero">
+        <p class="eyebrow">理解 / 实践 / 精选</p>
+        <h1>让程序用上<br><span>结构化判断。</span></h1>
+        <p class="lede">Jev 是 TypeSafe 的决策模型。给它业务状态和预先定义的问题，得到选项、评分或条件概率，再由你的代码决定如何处理。</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/majiayu000/awesome-jev/blob/main/guides/start.md#中文">从零理解 Jev ↗</a>
+          <a class="button" href="https://github.com/majiayu000/awesome-jev/blob/main/examples/README.md#中文">运行第一个示例 ↗</a>
+        </div>
+        <p class="muted">社区维护 · 与 TypeSafe 无隶属关系 · 收录不等于验证或背书</p>
+      </section>
+      <section id="learn" class="section" aria-labelledby="learn-title">
+        <div class="section-head"><p class="eyebrow">01 / 认识 Jev</p><h2 id="learn-title">先把输入、判断和执行分开。</h2></div>
+        <div class="flow" aria-label="业务状态和问题交给 Jev，结果经代码校验后形成路由建议或进入人工复核">
+          <div><small>INPUT</small><strong>状态 + 问题</strong><span>一张工单、一份文档</span></div><b aria-hidden="true">→</b>
+          <div><small>JUDGMENT</small><strong>Jev</strong><span>返回结构化结果</span></div><b aria-hidden="true">→</b>
+          <div><small>CONTROL</small><strong>你的代码</strong><span>校验、规则、回退</span></div><b aria-hidden="true">→</b>
+          <div><small>OUTCOME</small><strong>建议或复核</strong><span>执行权限仍由系统管理</span></div>
+        </div>
+        <div class="primitives">
+          <article><code>Choice</code><h3>选哪个？</h3><p>从命名选项中选择。例：工单应进入账单、技术还是其他队列。</p></article>
+          <article><code>Score</code><h3>在哪个等级？</h3><p>按明确的有序标准打分。例：从平静到生气，结果可以是小数。</p></article>
+          <article><code>Noul</code><h3>条件成立吗？</h3><p>返回 0–1 的概率。例：消息是否明确表达了紧急性。</p></article>
+        </div>
+        <aside class="notice"><strong>格式正确 ≠ 判断正确。</strong>置信度不能直接当作正确率。示例阈值需要用自己的数据评估，高风险操作仍需授权与复核。<a href="https://docs.typesafe.ai/confidence">官方置信度说明 ↗</a></aside>
+        <p class="muted">接口说明依据 <a href="https://docs.typesafe.ai/introduction">TypeSafe 文档</a>与<a href="https://docs.typesafe.ai/primitives">三种基础问题说明</a>。</p>
+      </section>
+      <section class="section" aria-labelledby="run-title">
+        <div class="section-head"><p class="eyebrow">02 / 跑通一个流程</p><h2 id="run-title">先离线演示，再显式调用 API。</h2></div>
+        <pre><code>git clone https://github.com/majiayu000/awesome-jev.git
+cd awesome-jev
+python3 examples/ticket_routing.py</code></pre>
+        <p>需要 Python 3.10+，不需要安装依赖。默认使用固定演示数据，<strong>不是模型预测</strong>；真实调用需配置密钥并启用 <code>--live</code>，可能产生费用。</p>
+        <p><a href="https://github.com/majiayu000/awesome-jev/blob/main/examples/README.md">查看输出解释、错误处理和测试方法 →</a></p>
+      </section>
+      <section id="resources" class="section" aria-labelledby="resources-title">
+        <div class="section-head"><p class="eyebrow">03 / 按任务查找</p><h2 id="resources-title">精选入口，不拼星数。</h2></div>
+        <p>以下内容来自中英文 README。保留原作者对项目和评测的说明；本次更新没有逐项运行这些项目。</p>
+        <div class="controls">
+          <label class="search">搜索<input id="q" type="search" placeholder="名称、用途、SDK、路由…" autocomplete="off"></label>
+          <label>分类<select id="category"><option value="">全部分类</option></select></label>
+          <label>资源语言<select id="language"><option value="zh">中文</option><option value="en">English</option></select></label>
+          <label>顺序<select id="sort"><option value="editorial">README 阅读顺序</option><option value="name">按名称</option></select></label>
+          <button id="reset" type="button">重置</button>
+        </div>
+        <p id="status" role="status" aria-live="polite">正在读取精选目录…</p>
+        <div id="grid" class="grid"></div>
+        <noscript><p>搜索需要 JavaScript。仍可在 <a href="https://github.com/majiayu000/awesome-jev/blob/main/README_zh.md">中文 README</a> 中浏览全部精选。</p></noscript>
+        <p class="archive">需要更广的覆盖？查看 <a href="https://github.com/majiayu000/awesome-jev/blob/main/catalog/FULL.md">完整收集记录</a>。它含历史及待核实资料，不等同于当前精选。<a href="https://github.com/majiayu000/awesome-jev/blob/main/research/DISCOVERY.md">参与候选发现 →</a></p>
+      </section>
+    </main>
+    <footer><strong>Awesome Jev</strong><p>先理解，再运行，再选择。<a href="https://github.com/majiayu000/awesome-jev/blob/main/README.md">English guide</a> · <a href="SOURCE.md">来源与维护</a> · <a href="https://github.com/majiayu000/awesome-jev/blob/main/CONTRIBUTING.md">参与贡献</a></p><p>纯静态页面，无构建依赖。GitHub Pages 是否上线取决于仓库设置；本页面不代表已经部署。</p></footer>
   </div>
-  <script src="js/app.js"></script>
 </body>
 </html>
