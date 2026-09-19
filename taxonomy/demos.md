@@ -1,22 +1,12 @@
-# Demos & playgrounds
+# Demos and examples
 
-Onboarding demos. Prefer linking official cookbooks + a few memorable community playgrounds. Exhaustive demo dump → [awesomejev.com](https://awesomejev.com/).
+Examples help explain how to use the API. They do not establish general reliability or production readiness.
 
-## Official
+- [Official demos](https://docs.typesafe.ai/demos.md) - TypeSafe’s demonstrations.
+- [Smart home example](https://docs.typesafe.ai/demos/smart-home.md) - An official application example.
+- [Playground](https://console.typesafe.ai/) - Try the API in TypeSafe’s console.
+- [Documentation index](https://docs.typesafe.ai/llms.txt) - Find current cookbook examples.
 
-- [Demos hub](https://docs.typesafe.ai/demos.md) · [Smart home](https://docs.typesafe.ai/demos/smart-home.md)
-- [Console playground](https://console.typesafe.ai/)
-- Cookbooks (via [llms.txt](https://docs.typesafe.ai/llms.txt)): parallel questions, rerank, semantic find, guardrails, citation check, RAG classify, function calling, skill suggestion, entity alignment, SDE cascade, date extraction, hierarchical classification, …
+Community examples are grouped under [browser automation](browser-cu.md), [applications](apps.md), and [games](games.md). Keep latency and cost figures attached to the run and conditions that produced them.
 
-## Community / named demos (from coverage)
-
-- Typewriter — [@stevekrouse](https://x.com/stevekrouse)
-- Yes/No, Crowdcheck, kill-my-idea — listed across awesome lists / awesomejev demos (~46)
-- [@waynesutton](https://x.com/waynesutton) — “Ask Jev anything” public demo (cited in blueprint follow list)
-- [@chetaslua](https://x.com/chetaslua) — jevmeter demo
-
-## How to use demos honestly
-
-1. Read [jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13.md) before generalizing a clip.
-2. Launch-post nuance: short dense state + human-readable question keys advantage demos.
-3. Mark `single-run` when only one latency/cost clip is shown.
+[All categories](../SUMMARY.md) · [Sources](../SOURCE.md)

@@ -1,8 +1,10 @@
 # 02 — Existing awesome lists / directories compared
 
+> Historical research notes from September 2026. Claims and counts below record what the cited sources reported at the time; they have not all been independently reproduced or rechecked. Current inclusion guidance is in [CONTRIBUTING.md](../CONTRIBUTING.md).
+
 ## Contenders
 
-| Project | URL | Stars (source) | Freshness signal |
+| Project | URL | Stars (source) | Update information |
 | --- | --- | --- | --- |
 | **Awesome Jev (site)** | https://awesomejev.com/ | Aggregates 410 entries / 10,093★ (site, refreshed **2026-09-17**) | Daily GitHub star refresh; largest inventory |
 | **AbdelStark/awesome-typesafe** | https://github.com/AbdelStark/awesome-typesafe · Pages: https://abdelstark.github.io/awesome-typesafe/ | **118★** (GitHub page fetch 2026-09-18); awesomejev listed 41★ (stale vs live) | README “Last reviewed: 2026-09-17” |
@@ -20,33 +22,33 @@
 
 ### Taxonomy on site (observed sections)
 
-1. Official / docs / SDKs  
-2. SDKs & clients (~35)  
-3. Integrations (~22) — includes **vercel/eve** (★5,355 on site — note: eve is a large agent framework with Jev as *evaluation* path, not a Jev-only repo)  
-4. Agent tooling (~61)  
-5. Browser & computer use (~24)  
-6. Applications (~34)  
-7. Games & simulations (~47)  
-8. Demos & playgrounds (~46)  
-9. Benchmarks / open replicas (large)  
-10. Other curated lists  
-11. Writing / threads  
+1. Official / docs / SDKs
+2. SDKs & clients (~35)
+3. Integrations (~22) — includes **vercel/eve** (★5,355 on site — note: eve is a large agent framework with Jev as *evaluation* path, not a Jev-only repo)
+4. Agent tooling (~61)
+5. Browser & computer use (~24)
+6. Applications (~34)
+7. Games & simulations (~47)
+8. Demos & playgrounds (~46)
+9. Benchmarks / open replicas (large)
+10. Other curated lists
+11. Writing / threads
 
 ### Strengths
 
-- **Breadth:** closest to a complete inventory within ~48h of launch culture.  
-- **Operational metadata:** language, stars, short why, repo+site links.  
-- **Includes critique-shaped entries** (e.g. HackSing/jev-report description, phishing benches where Haiku wins, finance “no alpha” notes) — but buried among toys.  
+- **Breadth:** closest to a complete inventory within ~48h of launch culture.
+- **Operational metadata:** language, stars, short why, repo+site links.
+- **Includes critique-shaped entries** (e.g. HackSing/jev-report description, phishing benches where Haiku wins, finance “no alpha” notes) — but buried among toys.
 - Spec sheet + primitives primer on homepage — good onboarding.
 
-### Gaps / risks for anosomejev differentiation
+### Limitations noted during research
 
-- **Quantity over signal:** 410 entries include many ★0 demos; hard to find production patterns.  
-- **Chinese / ZH depth thin** in the main English wall of text (HackSing listed under benchmarks; little ZH editorial).  
-- **Critique section not first-class** — HN honesty themes underrepresented as a category.  
-- **Integration star inflation:** listing vercel/eve at 5k★ can dominate “most starred” narrative though Jev is one feature.  
-- **No bilingual UX** comparable to AnotiaWang.  
-- **No “trust labels”** (private data / single-run / vendor-eval) as systematically as AbdelStark’s CONTRIBUTING ethos.
+- **Large inventory:** 410 entries include many demos; production readiness requires checking each project.
+- **Chinese / ZH depth thin** in the main English wall of text (HackSing listed under benchmarks; little ZH editorial).
+- **Critique section not first-class** — HN honesty themes underrepresented as a category.
+- **Integration star inflation:** listing vercel/eve at 5k★ can dominate “most starred” narrative though Jev is one feature.
+- **No bilingual UX** comparable to AnotiaWang.
+- **No “source notes”** (private data / single-run / vendor-eval) as systematically as AbdelStark’s CONTRIBUTING ethos.
 
 ---
 
@@ -56,22 +58,22 @@
 
 ### What it covers
 
-- Strong **Start here** + official docs/SDK/patterns/cookbooks/research.  
-- Community: clients, agent tooling, browser agents, games/robotics, **evaluations and independent research**, showcases/field notes.  
-- Explicit evaluation caveats in many bullets (e.g. calibre thresholds don’t transfer; jev-axi benchmark notes).  
+- Strong **Start here** + official docs/SDK/patterns/cookbooks/research.
+- Community: clients, agent tooling, browser agents, games/robotics, **evaluations and independent research**, showcases/field notes.
+- Explicit evaluation caveats in many bullets (e.g. calibre thresholds don’t transfer; jev-axi benchmark notes).
 - Points to independent walkthrough https://warmersun.com/jev/ (“Typed Decisions, Not Chat”).
 
 ### Strengths
 
-- **Quality bar + limitation disclosure** culture.  
-- GitHub Pages site + CI checks badge.  
+- **Quality bar + limitation disclosure** culture.
+- GitHub Pages site + CI checks badge.
 - Good for engineers who want trustworthy links.
 
 ### Gaps
 
-- Far fewer entries than awesomejev.com (by design).  
-- Less games/toys inventory.  
-- Chinese coverage not a first-class section.  
+- Far fewer entries than awesomejev.com (by design).
+- Less games/toys inventory.
+- Chinese coverage not a first-class section.
 - Taxonomy is English GitHub-README classic, not product-domain (routing vs games).
 
 ---
@@ -86,16 +88,16 @@ Official, Community, SDKs, Applications, Demos & Games, Agent Tools, Research & 
 
 ### Strengths
 
-- Best **ZH onboarding** among GitHub lists (full Chinese README).  
-- Clear primitive table; cookbooks/patterns mirrored from docs.  
-- Curated “useful” tone vs dump-everything.  
+- Best **ZH onboarding** among GitHub lists (full Chinese README).
+- Clear primitive table; cookbooks/patterns mirrored from docs.
+- Curated “useful” tone vs dump-everything.
 - Articles section includes Every/Mike Taylor, Register, Zenn JP, agentjournal.
 
 ### Gaps
 
-- Smaller absolute inventory than awesomejev.  
-- Articles section still light on Chinese press (orcarouter / remio / woshipm / ourcoders not listed in fetched README).  
-- Independent critique / calibration studies fewer than AbdelStark’s eval subsection.  
+- Smaller absolute inventory than awesomejev.
+- Articles section still light on Chinese press (orcarouter / remio / woshipm / ourcoders not listed in fetched README).
+- Independent critique / calibration studies fewer than AbdelStark’s eval subsection.
 - Stars growing but still mid-size.
 
 ---
@@ -124,41 +126,14 @@ Official, Community, SDKs, Applications, Demos & Games, Agent Tools, Research & 
 
 ### Strengths
 
-- Best **“where is Jev making real decisions?”** framing.  
-- Strict inclusion: must use Jev for concrete typed decision; one category per entry.  
-- Captures social proof (HN 49717558, founder launch tweet, Chinese X @dotey thread).  
-- High-signal field guide, not encyclopedia.
+- Best **“where is Jev making real decisions?”** framing.
+- Strict inclusion: must use Jev for concrete typed decision; one category per entry.
+- Captures social proof (HN 49717558, founder launch tweet, Chinese X @dotey thread).
+- Selected field guide, not encyclopedia.
 
 ### Gaps
 
-- Incomplete vs ecosystem size (intentionally).  
-- Games underweighted vs viral demos.  
-- Chinese *longform* articles still mostly absent; ZH presence via X thread.  
+- Incomplete vs ecosystem size (intentionally).
+- Games underweighted vs viral demos.
+- Chinese *longform* articles still mostly absent; ZH presence via X thread.
 - Less SDK exhaustiveness than AnotiaWang / awesomejev.
-
----
-
-## Cross-list gap matrix (for anosomejev)
-
-| Gap | awesomejev.com | AbdelStark | AnotiaWang | yibie |
-| --- | --- | --- | --- | --- |
-| Exhaustive inventory | ●●●●● | ●● | ●●● | ●● |
-| Signal / inclusion bar | ●● | ●●●●● | ●●●● | ●●●●● |
-| Chinese longform | ● | ○ | ●● (README ZH) | ● (X) |
-| Independent evals / critique | ●● | ●●●●● | ●●● | ●●● |
-| Practice taxonomy | ●● (by artifact type) | ●● | ●● | ●●●●● |
-| Official docs depth | ●●● | ●●●●● | ●●●● | ●● |
-| Daily star refresh | ●●●●● | ○ | ○ | ○ |
-| Trust labels (caveats) | ●● | ●●●●● | ●●● | ●●●● |
-
----
-
-## Recommended competitive stance
-
-**Do not try to out-index awesomejev.com.** Differentiate on:
-
-1. **Curated signal + trust labels** (AbdelStark spirit)  
-2. **Practice taxonomy** (yibie spirit)  
-3. **First-class Chinese + critique/calibration** (currently underserved)  
-4. **Editorial “must-include 30”** and anti-patterns / jaggedness  
-5. Optional: dual browse modes — *by artifact* vs *by decision pattern*

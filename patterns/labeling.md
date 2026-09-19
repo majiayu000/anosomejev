@@ -1,25 +1,18 @@
-# Pattern: Data labeling & curation
+# Batch labeling
 
-**Idea:** Map-reduce style labeling — many parallel typed questions over documents/rows at low cost; human review on low confidence.
+Apply defined categories to documents or rows of data.
 
-## Why Jev fits
+## References
 
-- Parallel questions on one state (docs)  
-- Vendor pricing ($0.042/MTok in, output free) makes large sweeps cheap — still validate accuracy on your ontology  
-- Confidence gating for review queues
+- [Official examples](https://docs.typesafe.ai/llms.txt) - Find classification and entity-matching examples.
+- [DuckDB example](https://x.com/hamiltonulmer/status/2100370557405667768) - Author’s report of classifying table rows.
+- [Every evaluation](https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds) - An example of repeated judgments across documents.
 
-## Exemplars / references
+## Practical steps
 
-| Entry | Notes |
-| --- | --- |
-| Every mini vibe check | 37×21 → 777 judgments; 1,709 across 11 experiments &lt;$0.01 — https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds |
-| hamiltonulmer DuckDB | Classify rows in CSV/Parquet — https://x.com/hamiltonulmer/status/2100370557405667768 |
-| Official cookbooks | hierarchical classification, entity alignment, date extraction — via https://docs.typesafe.ai/llms.txt |
-| yibie taxonomy | “Data Labeling & Curation” practice category — https://github.com/yibie/awesome-jev |
+1. Define categories and ambiguous cases before labeling.
+2. Compare predictions with human labels on a representative sample.
+3. Review uncertain cases and inspect systematic errors.
+4. Measure accuracy, latency, and cost for the full batch.
 
-## Practice tips
-
-1. Define label ontology in code; Jev only judges against criteria text.  
-2. Shadow mode: log Jev vs human before cutting over.  
-3. Negative benches (phishing) show **task-accuracy** can lose to small LLMs — don’t assume win.  
-4. Replicas (jevlike/openjev) are for interface experiments, not drop-in TypeSafe quality.
+[All guides](../SUMMARY.md#使用方法) · [Model limitations](../taxonomy/critique-limits.md)

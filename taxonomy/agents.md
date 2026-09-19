@@ -1,26 +1,15 @@
-# Agent tooling
+# Agent tools
 
-MCP servers, routers, review bots, wardens, skill routers, foreman loops. Prefer entries that use Jev for a **concrete typed decision** (route / verify / stop / escalate).
+Tools for model selection, code review, and checking agent work. Inclusion does not establish that an agent is safe to run unattended.
 
-## Must-include agents
+- [jev-router](https://github.com/gargpratyush/jev-router) - Select a model for a Claude Code task.
+- [jev-review — devagrawal09](https://github.com/devagrawal09/jev-review) - Code review workflow with a dashboard.
+- [jev-review — NiazMorshed2007](https://github.com/NiazMorshed2007/jev-review) - Local code review through an MCP plugin.
+- [foreman](https://github.com/thruwire/foreman) - Use Jev to monitor a coding agent’s work.
+- [jev-mcp](https://github.com/jkudish/jev-mcp) - Expose Jev checks and search through MCP tools.
 
-| Project | Link | ★ (awesomejev 2026-09-17) | Why |
-| --- | --- | --- | --- |
-| typesafe-ai/skills | https://github.com/typesafe-ai/skills | ★60 | Official agent skill · `official` |
-| devagrawal09/jev-review | https://github.com/devagrawal09/jev-review | ★77 | Staged code-review workflow + dashboard |
-| thruwire/foreman | https://github.com/thruwire/foreman | ★67 | Supervisor keeps coding agents on task via Jev |
-| NiazMorshed2007/jev-review | https://github.com/NiazMorshed2007/jev-review | ★45 | Local-first MCP quality review plugin |
-| gargpratyush/jev-router | https://github.com/gargpratyush/jev-router | ★44 | Route Claude Code tasks to cheapest capable model |
-| jkudish/jev-mcp | https://github.com/jkudish/jev-mcp | ★24 | Early MCP wrapping cookbook verify/screen/find |
-| blakestone-x/jev-mcp | https://github.com/blakestone-x/jev-mcp | ★4 | Python MCP classify/score/check |
-| DevMortimer/pi-warden | https://github.com/DevMortimer/pi-warden | ★22 | Pi guardrails |
+- [pi-warden](https://github.com/DevMortimer/pi-warden) - Checks for Pi agent workflows.
 
-## Patterns seen in the wild
+See [checking agent actions](../patterns/verification.md) and [routing](../patterns/routing.md).
 
-- **Cheap filter → expensive escalate** — e.g. [@isNickMa](https://x.com/isNickMa/status/2100566407524344225) agent safety monitor (filter / escalate to Gemini)
-- **Handoff gate** — [@zxdubx](https://x.com/zxdubx/status/2100604919120121960) Agent Handoff Gate (verify worker evidence before lead-agent handoff; early ~60% lower lead usage claimed · `single-run` until reproduced)
-- **Model routing** — jev-router; [@ephraimduncan](https://x.com/ephraimduncan) demos cited in practice lists
-
-## Firehose
-
-awesomejev.com Agent tooling ~61 entries. Link out for toys; keep this page production-shaped.
+[All categories](../SUMMARY.md) · [Sources](../SOURCE.md)

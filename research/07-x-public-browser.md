@@ -1,11 +1,13 @@
 # 07 — X public browser dig (no X plugin)
 
-**When:** 2026-09-18 Asia/Shanghai  
+> Historical research notes from September 2026. Claims and counts below record what the cited sources reported at the time; they have not all been independently reproduced or rechecked. Current inclusion guidance is in [CONTRIBUTING.md](../CONTRIBUTING.md).
+
+**When:** 2026-09-18 Asia/Shanghai
 **Method:** Box browser on public x.com profiles/posts (no login). Search URLs redirect to login.
 
 ## Launch thread (@CompleteSkeptic)
 
-- Main: https://x.com/CompleteSkeptic/status/2099925682726002904  
+- Main: https://x.com/CompleteSkeptic/status/2099925682726002904
   Sep 15 · ~32.7M views · ~3.5K replies · ~7.1K reposts · ~67K likes · ~54K bookmarks
 - Claims: RLCD, 20–200× faster, 40–400× cheaper, free output, “frontier composable intelligence”
 - Thread: no text gen; $0.042/MTok; Doom ~10/s ~$7/h; Wikipedia race; blog/waitlist/Discord
@@ -18,7 +20,7 @@
 - Vercel AI Gateway (route/score/stop)
 - Launch video BTS
 
-## Community (high signal)
+## Community (selected)
 
 | Who | Angle | URL |
 | --- | --- | --- |
@@ -33,5 +35,5 @@
 
 ## Praise vs skepticism (X)
 
-Praise: cost/latency, typed probs, gateway integrations, browser-use demo.  
+Praise: cost/latency, typed probs, gateway integrations, browser-use demo.
 Skepticism: apples-to-oranges vs LLMs, vendor evals, free-output sustainability, SDK/ZDR/credits questions, “just a classifier” framing.

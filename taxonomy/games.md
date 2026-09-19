@@ -1,23 +1,13 @@
-# Games & simulations
+# Games and simulations
 
-**Caveat (vendor + HN):** demos typically use **structured emulator / game state**, not pixels. Pathing exploits and non-AI bots may outperform. Label `structured-state-demo`. Interesting for **realtime decision rate**, not computer vision.
+Examples of decisions in game or simulation loops. Structured game state and image input are different tasks.
 
-## Community
+- [typesafe-mario](https://github.com/fhshaik/typesafe-mario) - Game agent using structured emulator state.
+- [jev-drone](https://github.com/RomanSlack/jev-drone) - Drone simulation using Jev in MuJoCo.
 
-| Project | Link | ★ (awesomejev 2026-09-17) | Notes |
-| --- | --- | --- | --- |
-| fhshaik/typesafe-mario | https://github.com/fhshaik/typesafe-mario | ★165 | Structured-emulator-state agent · compare vs Doom caveats |
-| RomanSlack/jev-drone | https://github.com/RomanSlack/jev-drone | ★36 | MuJoCo + Jev at 2.5 Hz |
+- [Doom demonstration](https://typesafe.ai/blog/introducing-system-one-models-and-jev) - TypeSafe’s launch article describes its demonstration and limitations.
+- [Pac-Man follow-up](https://x.com/ephraimduncan/status/2100554620254752981) - Author’s report that an earlier win could not be reproduced.
 
-## Official / launch demos (references)
+See [interactive applications](../patterns/realtime.md).
 
-- Doom — launch post / thread: ~10 calls/s · ~$7/h claimed · structured state · https://typesafe.ai/blog/introducing-system-one-models-and-jev · https://x.com/CompleteSkeptic/status/2099925687465570372
-- Wikiracing — high-cardinality Choice (up to 255; higher via 2-stage score-then-choice) · no hallucinated links framing · vendor nuance: LLM opponents often non-reasoning for watchability
-
-## Community posts
-
-- [@ephraimduncan](https://x.com/ephraimduncan/status/2100524915007144289) — Pac-Man from JSON maze state; later: beat once, **could not reproduce** · useful non-marketing result
-
-## Firehose
-
-awesomejev.com Games & simulations ~47. Keep toys on the firehose; pin structured-state caveat here.
+[All categories](../SUMMARY.md) · [Sources](../SOURCE.md)

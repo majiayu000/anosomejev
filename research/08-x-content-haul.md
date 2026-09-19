@@ -1,7 +1,9 @@
 # 08 — X content haul: TypeSafe AI / Jev / System One
 
-**Research date:** 2026-09-18 (UTC+8)  
-**Method:** public, unlogged box-browser pages only; no X plugin/API. Post text and visible metrics were transcribed from x.com pages. Google web search was attempted for `Jev TypeSafe site:x.com/*/status` but Google returned a reCAPTCHA “unusual traffic” page, so the haul uses public profile/tweet/reply pages and known public links instead.  
+> Historical research notes from September 2026. Claims and counts below record what the cited sources reported at the time; they have not all been independently reproduced or rechecked. Current inclusion guidance is in [CONTRIBUTING.md](../CONTRIBUTING.md).
+
+**Research date:** 2026-09-18 (UTC+8)
+**Method:** public, unlogged box-browser pages only; no X plugin/API. Post text and visible metrics were transcribed from x.com pages. Google web search was attempted for `Jev TypeSafe site:x.com/*/status` but Google returned a reCAPTCHA “unusual traffic” page, so the haul uses public profile/tweet/reply pages and known public links instead.
 **Metric order where shown:** replies · reposts · likes · bookmarks; views called out separately. Counts are snapshots and may change.
 
 **Distinct post URLs in this file: 47.**

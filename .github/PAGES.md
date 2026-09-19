@@ -1,8 +1,9 @@
 # GitHub Pages
 
-No Actions workflow required. Enable:
+The repository includes a static website in `docs/`. It is maintained separately from the Markdown resource list and has not been updated as part of the repository documentation cleanup.
 
-1. Push `docs/` on `main` (do not push from this box unless asked).
-2. Settings → Pages → Source: Deploy from a branch.
-3. Branch: `main` / folder: `/docs`.
-4. Site: https://majiayu000.github.io/anosomejev/
+To publish it when ready, configure Settings → Pages → Deploy from a branch → `main` → `/docs`.
+
+For the `awesome-jev` repository, the project-site URL would be `https://majiayu000.github.io/awesome-jev/`. Renaming a repository changes its default project-site path; review the website’s own links before enabling or republishing it.
+
+Preview the existing site with `cd docs && python3 -m http.server 8080`.

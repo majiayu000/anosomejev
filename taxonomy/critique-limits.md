@@ -1,84 +1,36 @@
-# Critique & known limits
+# Model limitations and evaluation
 
-**Read this before shipping.** anosomejev pins honesty themes that encyclopedias bury.
+A correctly formatted answer can still be wrong. Assess Jev on the task you intend to automate.
 
-## Red line
+## Official limitations
 
-> **Type safety ≠ factual correctness.**  
-> Constrained Choice / Score / Noul cannot invent out-of-schema tokens; they **can** still be confidently wrong. Vendor “0% hallucination” / “0% type errors” is a **schema guarantee**, not task accuracy. Founder and HN commentators agree.
+The [Jev 1.13 limitations document](https://docs.typesafe.ai/model-jaggedness/jev-1.13.md) describes version-specific behavior. Consult the documentation for the version you use.
 
-Tags: `schema-guarantee` vs `task-accuracy` vs `calibration` — see [TRUST_LABELS.md](../TRUST_LABELS.md).
+| Concern | Practical approach |
+| --- | --- |
+| Ambiguous or compound questions | State criteria clearly and separate distinct judgments. |
+| Arithmetic and dates | Calculate exact results in code. |
+| Long, irrelevant input | Include the information needed for the decision. |
+| Conflicting instructions or untrusted input | Separate instructions from input data and test adversarial cases. |
+| Text generation | Use a model intended to generate text. |
+| Confidence estimates | Check how confidence relates to observed correctness on your own data. |
 
-## Official: jaggedness (jev-1.13)
+## Reading evaluations
 
-Source: https://docs.typesafe.ai/model-jaggedness/jev-1.13.md (reviewed 2026-09-17)
+- Check who conducted the test and whether methods and samples are available.
+- Distinguish agreement with reference models from correctness against labeled answers.
+- Compare equivalent task settings, and retain failures alongside successes.
+- Treat a single demo’s latency and cost as measurements of that run.
+- Do not infer the official model’s architecture or quality from an independent compatible implementation.
 
-| # | Mode | Guidance |
-| --- | --- | --- |
-| 1 | Literal reading | Exact conditions; boundaries in criteria; split intent |
-| 2 | Math and numbers | Arithmetic in code; don’t count with the model |
-| 3 | Date/time comparison | Extract parts as Choice; compare in code |
-| 4 | Indirection | Reduce hops; name relevant state fields |
-| 5 | Large irrelevant state | Filter first; context rot is real |
-| 6 | Adversarial content | Precise criteria; edge-case test |
-| 7 | Contradictory instructions | Align; avoid Noul where true means “no” |
-| 8 | Structural invariants | Don’t assume P(noul)=P(choice yes) or P+¬P=1 across questions |
-| 9 | Generation | Use a generative model |
+Sources: [TypeSafe launch article](https://typesafe.ai/blog/introducing-system-one-models-and-jev), [vendor evaluations](https://evals.typesafe.ai/), and [evaluation projects](benchmarks-replicas.md).
 
-**Avoid:** asking what code can compute exactly; hiding several judgments in one question; System Two / multi-hop; over-stuffing state.
+## Reports worth reading
 
-## Launch-post nuance boxes (vendor honesty)
+- [Phishing classification comparison](https://github.com/anisselbd/jev-phishing-bench) - Includes results where Jev underperforms a comparison model.
+- [Pac-Man follow-up](https://x.com/ephraimduncan/status/2100554620254752981) - Author reports being unable to reproduce an earlier win.
+- [Every evaluation](https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds) - A small-sample experiment, not a general accuracy guarantee.
 
-From https://typesafe.ai/blog/introducing-system-one-models-and-jev
+These are source reports; this repository has not independently reproduced their results. For a deployment decision, use your own labeled examples, set acceptable error rates, and decide how uncertain cases will be handled.
 
-1. Side-by-side demos use short dense state + readable question keys.  
-2. Workflow evals: capability-team built → possible bias; not training set but not independent.  
-3. LLM baseline uses System One LLM wrapper (structured + probs) — slower/costlier than unconstrained LLM.  
-4. “0% type errors” is mathematical schema guarantee.  
-5. Doom: **structured state text**, not pixels (“yet”).  
-6. Wikiracing: opponents often non-reasoning modes; Choice cardinality up to 255 (higher via score-then-choice).  
-7. Homepage 193.6× / 444.6× are **higher end** of gains.  
-8. Speed measured from West Coast laptops.
-
-## HN themes (main thread 49717558)
-
-https://news.ycombinator.com/item?id=49717558
-
-**Praise:** right abstraction for automation; speed/cost enable verify-every-step; confidence as control plane; pairs with LLMs; demos click; entity resolution / RAG ranking tractable.
-
-**Critique:**
-
-1. Misleading “frontier / 200×” marketing titles  
-2. “Can’t hallucinate” semantic trap  
-3. Apples-to-oranges speed baselines (CoT vs parallel numbers)  
-4. Doom demos “cooked” (structured state)  
-5. “Just a classifier / GLiNER / constrained decoding?” — architecture unpublished  
-6. Open weights / privacy / gateway friction  
-7. Accuracy evidence thin; agreement ≠ ground truth; selective-risk curves wanted  
-8. Problem framing burden on developer  
-9. Closed architecture skepticism  
-
-Wrong primary id: **49716682** is a small related tweet thread — not the launch.
-
-## Independent EN critique pointers
-
-Kingy, Flavio, warmersun, agentjournal, Every — see [writing.md](writing.md).
-
-## Negative results to keep
-
-- Phishing bench: Haiku can beat Jev — `anisselbd/jev-phishing-bench` · `negative-result`  
-- Pac-Man win unreproduced — [@ephraimduncan](https://x.com/ephraimduncan/status/2100554620254752981)  
-- Invoice workflows weak vs comparators in vendor charts (Kingy / orcarouter echo)  
-- “JSON classifier” framing — [@danshipper](https://x.com/danshipper/status/2100251499443998766)
-
-## Anti-patterns (editorial)
-
-- Shipping automation on vendor Pareto % alone  
-- Counting, date math, or hex color proximity **inside** Jev  
-- Equating free output pricing with unbounded accuracy  
-- Ranking Jev ecosystem by `vercel/eve` stars (`star-inflation-host`)  
-- Conflating jevlike/openjev with TypeSafe weights  
-
-## Default independent smoke test
-
-Every protocol: https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds
+[All categories](../SUMMARY.md) · [Sources](../SOURCE.md)

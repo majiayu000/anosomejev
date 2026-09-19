@@ -1,11 +1,13 @@
 # 08 — X content haul (WebSearch/WebFetch)
 
-**Research date:** 2026-09-18 (Asia/Shanghai)  
-**Scope:** Public X status URLs about TypeSafe AI, System One, or Jev, excluding the known launch status `2099925682726002904`.  
-**Method:** WebSearch/WebFetch only. Direct `x.com` fetches returned 403 in this environment; where available, public indexed/unrollnow mirrors were used to read the status text, then the canonical `x.com/{handle}/status/{id}` URL is listed below.  
+> Historical research notes from September 2026. Claims and counts below record what the cited sources reported at the time; they have not all been independently reproduced or rechecked. Current inclusion guidance is in [CONTRIBUTING.md](../CONTRIBUTING.md).
+
+**Research date:** 2026-09-18 (Asia/Shanghai)
+**Scope:** Public X status URLs about TypeSafe AI, System One, or Jev, excluding the known launch status `2099925682726002904`.
+**Method:** WebSearch/WebFetch only. Direct `x.com` fetches returned 403 in this environment; where available, public indexed/unrollnow mirrors were used to read the status text, then the canonical `x.com/{handle}/status/{id}` URL is listed below.
 **Result:** **19 unique status URLs** found beyond the known launch thread.
 
-## High-signal status URLs
+## Selected status URLs
 
 | Canonical X status URL | Author | One-sentence summary | Why it matters for an Awesome Jev list |
 |---|---|---|---|

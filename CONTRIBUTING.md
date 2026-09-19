@@ -1,49 +1,45 @@
-# Contributing to anosomejev
+# Contributing to Awesome Jev
 
-**anosomejev** (Awesome Jev) is a **curated high-signal** field guide for the TypeSafe System One / Jev ecosystem. It is **not affiliated with TypeSafe** and does **not** compete with [awesomejev.com](https://awesomejev.com/) on quantity. Prefer linking the firehose there; promote entries here only when they teach a decision pattern, carry evidence, or fill a ZH / critique gap.
+欢迎补充有明确用途的 Jev 项目、教程和评测，也欢迎纠正错误信息。
 
-## Inclusion bar
+## 收录要求
 
-A PR must include:
+- 提供可公开访问的项目或文章链接。
+- 用一句话说明它解决什么问题，以及 Jev 在其中做什么。
+- 优先链接项目源码、官方文档、作者文章或原始测试结果。
+- 性能、成本和准确率数字要附测试条件与来源。未亲自复现时，写明“作者报告”或“厂商公布”。
+- 示例和实验可以收录，但不要称为生产可用；已失效、归档或停止维护的项目不放在首页推荐中。
 
-1. **Public URL** (repo, docs page, article, or status) that anyone can open.
-2. **One typed-decision sentence** — what Choice / Score / Noul (or equivalent System One call) decides, and what code does with the answer.
-3. **Trust labels** from [TRUST_LABELS.md](TRUST_LABELS.md) (at least `community` or `official`, plus any eval / replica / caveat labels that apply).
-4. **Caveat if private data** — if the demo uses closed datasets or single-run anecdotes, say so (`single-run`, no invented accuracy %).
-5. **Stars only with date** — prefer awesomejev.com snapshot `2026-09-17`, or live GitHub with fetch date. Never invent counts.
+无需填写一套标签，也不按星数、浏览量或固定名额收录。
 
-## Prefer
+## 修改哪里
 
-- Entries with **thresholds, policies, telemetry, or shadow mode**
-- **Independent evals** and **negative results**
-- **Chinese longform** and bilingual onboarding
-- Clear split: TypeSafe Jev vs open **replicas** (interface only)
-
-## Avoid / reject
-
-- Dumping every ★0 toy already on awesomejev.com
-- Ranking by stars when the host is `star-inflation-host` (e.g. large frameworks with a Jev evaluate path)
-- Equating schema safety with truth (“zero hallucination” misuse)
-- Unverified repos without `needs-verify` (e.g. HackSing/jev-report until confirmed)
-- Marketing multiples (193.6× / 444.6×) without linking vendor nuance / jaggedness
-
-## Where to add
-
-| Kind | File |
+| 内容 | 文件 |
 | --- | --- |
-| Artifact type | `taxonomy/*.md` |
-| Decision pattern | `patterns/*.md` |
-| Must-30 change | Propose in PR; update both `README.md` and `README_zh.md` |
-| Trust vocabulary | `TRUST_LABELS.md` |
+| 首页精选 | 同时修改 `README.md` 和 `README_zh.md`，保持项目与含义一致 |
+| 分类补充 | `taxonomy/` 中对应的文档，在 `SUMMARY.md` 查看分类 |
+| 使用方法 | `patterns/` 中对应的文档 |
+| 某个时间段的动态 | `updates/`，注明日期并更新索引 |
+| 来源与整理方式 | `SOURCE.md` |
 
-One primary category per entry. Cross-link patterns when useful.
+一个项目只在最相关的分类中写完整介绍，其他位置按需要链接过去。首页可以保留一句简短推荐。
 
-## Style
+## 如何描述证据
 
-- Clean markdown; factual one-liners.
-- No invented metrics, training details, or unpublished architecture claims.
-- EN and ZH READMEs stay in sync on Must-30, critique red line, and section order.
+来源、文章类型和验证程度分别写清楚即可，不需要“可信”等级。
 
-## License
+- 官方文档说明产品接口；厂商性能主张仍需查看测试方法。
+- 第三方解读属于文章，不能仅凭作者独立就称为独立评测。
+- 评测应能找到任务、数据或样本、方法、对照和结果；本仓库未复现的结果要明确归因给原作者。
+- 一次演示只能说明该次运行。开源兼容实现也不等于官方模型、训练方法或权重。
+- 尚未确认的资料保留在研究笔记中，不作为已验证结论推荐。
 
-List content is [CC0-1.0](LICENSE). Linked projects keep their own licenses.
+## 提交前检查
+
+打开新增链接，检查本地相对链接，核对中英文首页的一致性，并运行 `git diff --check`。不要为了文档修改引入构建系统或测试框架。
+
+`docs/` 是单独维护的网页及其数据，当前没有从 Markdown 自动生成网页的脚本。修改这里的资源文档不会自动更新网页；不要声称两者已经同步。
+
+## English summary
+
+Provide a public link and a plain-language description of the use case. Attribute claims to their sources, distinguish commentary from experiments, and state when results have not been reproduced here. Keep both READMEs aligned. Use the category pages for additional resources and the dated updates for news. Website files under `docs/` are maintained separately.
