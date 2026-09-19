@@ -1,20 +1,17 @@
-# 完整收集目录
+# Jev 资源目录
 
-这里保留仓库已收集的项目、文档、文章和演示。首页提供简短入门清单，本目录提供完整收集内容。
+[打开完整资源目录](FULL.md)，按类别查找项目、工具、教程和文章。
 
-| 清单 | 数量 | 来源与时间 |
-| --- | ---: | --- |
-| [公开目录收集](FULL.md) | 410 条资源 | awesomejev.com / hellogumbo，2026-09-18 快照 |
-| [GitHub 项目与补充资源](GITHUB.md) | 584 条资源 | 仓库已有网页数据，日期差异见该页说明 |
+- [官方资料](FULL.md#official)
+- [SDK 与客户端](FULL.md#sdks)
+- [网关与集成](FULL.md#integrations)
+- [智能体工具](FULL.md#agents)
+- [浏览器与电脑操作](FULL.md#browser)
+- [应用](FULL.md#apps)
+- [游戏与模拟](FULL.md#games)
+- [演示与示例](FULL.md#demos)
+- [评测与研究](FULL.md#research)
+- [资源清单](FULL.md#lists)
+- [文章与讨论](FULL.md#articles)
 
-两批资源有重叠，不能把数量相加当成独立项目总数。它们包含文章和官方文档，也不能把每条都称为开源项目。保留两份来源清单便于追溯，避免合并时丢失描述或链接。
-
-这些是历史收集记录，未逐项验证当前可访问性、分类或实际效果。发现链接失效时应标注状态或更新地址，不应因缩减首页而删除收集记录。
-
-## 数据与维护
-
-- 410 条资源的原始字段保留在 [entries.json](entries.json)，来源见 [SOURCE.md](SOURCE.md)。修改这份数据时同步修改 [FULL.md](FULL.md)。
-- 584 条资源来自 [`docs/data/entries.json`](../docs/data/entries.json)。[GITHUB.md](GITHUB.md) 是本次整理出的可读副本，没有改动网页文件，也没有自动同步任务。
-- 新增资源可直接加入合适的清单，附名称、说明与链接；不要为凑固定数量删去其他资源。
-
-[中文首页](../README_zh.md) · [English](../README.md)
+[中文首页](../README_zh.md) · [English](../README.md) · [资料来源与维护](SOURCE.md)

@@ -2,13 +2,9 @@
 
 [中文首页](README_zh.md) · [English](README.md)
 
-## 完整收集内容
+## 完整资源目录
 
-- [410 条公开目录资源](catalog/FULL.md)
-- [584 条 GitHub 与补充资源](catalog/GITHUB.md)
-- [来源、数量与维护说明](catalog/README.md)
-
-两批内容有重叠，下方分类页提供简短介绍，不代表收集总量。
+[按类别浏览所有资源](catalog/FULL.md)。
 
 ## 资源分类
 

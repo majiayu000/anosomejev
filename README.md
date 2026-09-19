@@ -6,7 +6,7 @@ Selected open-source projects, SDKs, tutorials, and evaluations for Jev, TypeSaf
 
 A community-maintained list, unaffiliated with TypeSafe. Inclusion is a reading recommendation, not a certification of safety, accuracy, or production readiness.
 
-**Full collections: [410 directory resources](catalog/FULL.md) · [584 GitHub and additional resources](catalog/GITHUB.md).** These collections overlap. The selections below are only a starting point. See [sources and counts](catalog/README.md).
+**[Browse all resources](catalog/FULL.md)** — Projects, tools, tutorials, and articles organized by category.
 
 ## Contents
 
