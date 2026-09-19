@@ -1,27 +1,59 @@
 # Awesome Jev
 
-Selected open-source projects, SDKs, tutorials, and evaluations for Jev, TypeSafe’s System One model.
+Understand Jev, run a first example, and find selected SDKs, projects, and evaluations.
 
-[简体中文](README_zh.md) · [Contributing](CONTRIBUTING.md) · [Sources](SOURCE.md)
+[简体中文](README_zh.md) · [Start here](guides/start.md#english) · [Runnable example](examples/README.md#english) · [Contributing](CONTRIBUTING.md)
 
 A community-maintained list, unaffiliated with TypeSafe. Inclusion is a reading recommendation, not a certification of safety, accuracy, or production readiness.
 
-**[Browse all resources](catalog/FULL.md)** — Projects, tools, tutorials, and articles organized by category.
+## What is Jev?
 
-## Contents
+Jev is TypeSafe’s structured-decision model. Give it **state** (a message, document, or application context) and **typed questions**; use the returned values in your own code. For example: classify a support ticket, score its frustration level, and check whether it is urgent. See the [official introduction](https://docs.typesafe.ai/introduction).
 
-- [Getting started](#getting-started)
-- [SDKs and integrations](#sdks-and-integrations)
-- [Agent tools](#agent-tools)
-- [Browser automation](#browser-automation)
-- [Applications and games](#applications-and-games)
-- [Evaluations and open implementations](#evaluations-and-open-implementations)
-- [Articles and Chinese resources](#articles-and-chinese-resources)
-- [Further reading](#further-reading)
+| Question | Use it for | Read the result as |
+| --- | --- | --- |
+| **Choice** | Pick a support queue from named options | A selected option and its distribution |
+| **Score** | Rate something using explicit ordered levels | A position on that rubric, possibly fractional |
+| **Noul** | Judge a clearly defined yes/no condition | A probability from 0 to 1; no separate confidence field |
+
+```mermaid
+flowchart LR
+    S["State + typed questions"] --> J["Jev"]
+    J --> A["Choice / Score / Noul"]
+    A --> C["Your code validates results"]
+    C --> R["Proposed route or review"]
+```
+
+The model judges; your code controls execution. A valid format does not guarantee a correct judgment. Choice/Score `confidence` summarizes a distribution; it is not a universal probability of correctness. See [primitives](https://docs.typesafe.ai/primitives) and [confidence](https://docs.typesafe.ai/confidence).
+
+## Choose your next step
+
+| Your goal | Start here |
+| --- | --- |
+| Understand the concepts and limits | [Beginner guide](guides/start.md#english) |
+| Run something without a key | [Offline ticket-routing demo](examples/README.md#english) |
+| Make a real API call | [Explicit live mode](examples/README.md#live-mode) |
+| Find a library or integration | [SDKs and integrations](#sdks-and-integrations) below |
+| Discover more resources with parallel workers | [Candidate discovery and Agent handoff](research/DISCOVERY.md) |
+| Browse beyond the shortlist | [Full collection](catalog/FULL.md) — includes historical and unverified records |
+
+The demo uses Python 3.10+ and the standard library; no package installation or API key is required:
+
+```bash
+git clone https://github.com/majiayu000/awesome-jev.git
+cd awesome-jev
+python3 examples/ticket_routing.py
+```
+
+This prints a **hand-authored fixture**, not a model prediction. Use `--live` only after reading the key, cost, and privacy notes in the example guide.
+
+## Selected resources
+
+The list below is manually editable. The website’s selected-resource data is derived from these two READMEs, not maintained as another independent shortlist. [Sources and historical snapshots](SOURCE.md).
+
+<!-- curated:start -->
 
 ## Getting started
-
-Jev returns choices, scores, and condition judgments for software to act on. A valid output format does not guarantee a correct judgment.
 
 - [Documentation](https://docs.typesafe.ai/) - API reference, quick start, and examples.
 - [Model limitations](https://docs.typesafe.ai/model-jaggedness/jev-1.13.md) - Known limitations documented for Jev 1.13.
@@ -75,14 +107,12 @@ Jev returns choices, scores, and condition judgments for software to act on. A v
 - [Baoyu’s Chinese explanation](https://x.com/dotey/status/2100109937237987823) - An explanation of Jev’s uses; this is commentary, not an independent benchmark.
 - [jev-report](https://github.com/HackSing/jev-report) - A Chinese report and reproduction materials; repository existence was checked on 2026-09-19, but its results have not been reproduced here.
 
+<!-- curated:end -->
+
 ## Further reading
 
-- [Resource categories](SUMMARY.md).
-- [Practical guides](SUMMARY.md#使用方法).
-- [Known limitations](taxonomy/critique-limits.md).
-- [Dated updates](updates/README.md).
-- [Research notes](research/00-overview.md).
+[Resource categories](SUMMARY.md) · [Practical guides](SUMMARY.md#使用方法) · [Known limitations](taxonomy/critique-limits.md) · [Dated updates](updates/README.md) · [Research notes](research/00-overview.md).
 
 ## Contributing
 
-Suggest projects, correct descriptions, or share documented failures using the [contribution guide](CONTRIBUTING.md).
+Suggest resources, correct descriptions, or share documented failures using the [contribution guide](CONTRIBUTING.md). Discovery output is a candidate pool, never automatic endorsement. [CC0 license](LICENSE).
